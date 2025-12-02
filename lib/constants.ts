@@ -1,0 +1,52 @@
+import { Eye, Globe, Zap, Cpu } from 'lucide-react';
+
+export const HABITATS = [
+    {
+        id: 'ogmax',
+        name: 'Ogmax.xyz',
+        animal: 'The Owl',
+        role: 'The Watcher',
+        description: 'Smart product tracking and notifications for Shopify stores. Always watching, always alerting.',
+        status: 'Live',
+        link: 'https://ogmax.xyz',
+        color: 'from-indigo-500 to-cyan-400',
+        icon: Eye,
+        position: { top: '15%', left: '10%' }, // For map placement
+    },
+    {
+        id: 'geodomaine',
+        name: 'Geodomaine Pro',
+        animal: 'The Eagle',
+        role: 'The Scout',
+        description: 'Scouting the best domains from above. Visionary domain intelligence.',
+        status: 'In Creation',
+        link: '#',
+        color: 'from-amber-500 to-orange-600',
+        icon: Globe,
+        position: { top: '15%', right: '10%' },
+    },
+    {
+        id: 'pronoplus',
+        name: 'PronoPlus',
+        animal: 'The Cheetah',
+        role: 'The Sprinter',
+        description: 'Fast and accurate predictions. Speed meets precision.',
+        status: 'In Creation',
+        link: '#',
+        color: 'from-yellow-400 to-red-500',
+        icon: Zap,
+        position: { bottom: '15%', left: '10%' },
+    },
+    {
+        id: 'antprompt',
+        name: 'AntPrompt',
+        animal: 'The Ant',
+        role: 'The Architect',
+        description: 'Building complex structures from simple prompts. Collective intelligence.',
+        status: 'In Creation',
+        link: '#',
+        color: 'from-emerald-500 to-green-700',
+        icon: Cpu,
+        position: { bottom: '15%', right: '10%' },
+    },
+];

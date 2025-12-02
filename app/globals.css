@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  /* Premium Zoo Theme - Dark Mode Default */
+  --background: #050a0e; /* Very dark jungle night */
+  --foreground: #e2e8f0; /* Soft moonlight text */
+  
+  /* Brand Colors */
+  --zoo-primary: #1a4d2e; /* Deep Jungle Green */
+  --zoo-secondary: #ff9f1c; /* Golden Sunset */
+  --zoo-accent: #f4e4ba; /* Savannah Sand */
+  --zoo-danger: #ef4444;
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: 12px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-zoo-primary: var(--zoo-primary);
+  --color-zoo-secondary: var(--zoo-secondary);
+  --color-zoo-accent: var(--zoo-accent);
+  --font-sans: var(--font-outfit);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-outfit), sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--zoo-accent), var(--zoo-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -35,7 +35,7 @@ export default function Navbar() {
                     ))}
                     <Link
                         href="/contact"
-                        className="bg-zoo-primary hover:bg-zoo-primary/80 text-white px-5 py-2 rounded-full text-sm font-bold transition-all hover:scale-105"
+                        className="block bg-zoo-primary hover:bg-zoo-primary/80 text-white px-5 py-2 rounded-full text-sm font-bold transition-all hover:scale-105"
                     >
                         GET TICKET
                     </Link>

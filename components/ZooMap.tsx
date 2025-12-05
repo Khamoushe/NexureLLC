@@ -22,7 +22,7 @@ export default function ZooMap() {
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.8 }}
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setIsCardsVisible(!isCardsVisible)}
                     className="relative cursor-pointer focus:outline-none"
@@ -51,17 +51,17 @@ export default function ZooMap() {
                             animate={{
                                 opacity: 1,
                                 scale: 1,
-                                y: [0, -15, 0], // Floating animation
+                                y: [0, -10, 0], // Subtle floating
                             }}
                             exit={{ opacity: 0, scale: 0, transition: { duration: 0.3 } }}
                             transition={{
                                 opacity: { duration: 0.5, delay: 0.1 * index },
                                 scale: { type: 'spring', stiffness: 100, delay: 0.1 * index },
                                 y: {
-                                    duration: 4,
+                                    duration: 6, // Slower float
                                     repeat: Infinity,
                                     ease: "easeInOut",
-                                    delay: index * 0.5 // Stagger floating
+                                    delay: index * 0.5
                                 }
                             }}
                         >
@@ -70,7 +70,7 @@ export default function ZooMap() {
                                 <div className={`absolute inset-0 bg-gradient-to-br ${habitat.color} opacity-0 group-hover:opacity-20 blur-2xl transition-opacity duration-500 rounded-full`}></div>
 
                                 {/* Card */}
-                                <div className="relative w-64 glass-panel p-6 rounded-2xl hover:scale-105 transition-transform duration-300 border-white/5 hover:border-white/20 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+                                <div className="relative w-64 glass-panel p-6 rounded-2xl border-white/5 hover:border-white/20 group-hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] transition-all duration-300 hover:-translate-y-1">
                                     <div className={`flex items-center justify-between mb-4 ${isCreation ? 'blur-sm opacity-50' : ''}`}>
                                         <div className={`p-3 rounded-xl bg-gradient-to-br ${habitat.color} text-white shadow-lg`}>
                                             <habitat.icon size={24} />

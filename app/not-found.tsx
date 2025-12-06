@@ -2,16 +2,19 @@ import Link from 'next/link';
 
 export default function NotFound() {
     return (
-        <div className="min-h-screen bg-[#050a0e] text-white flex flex-col items-center justify-center p-6 text-center">
-            <h1 className="text-9xl font-bold text-white/10">404</h1>
-            <h2 className="text-3xl font-bold mb-4">Habitat Not Found</h2>
-            <p className="text-gray-400 mb-8">It seems this animal has wandered off into the digital wilderness.</p>
-            <Link
-                href="/"
-                className="px-8 py-3 bg-zoo-primary rounded-full font-bold hover:bg-zoo-primary/90 transition-colors"
-            >
-                Return to Zoo Entrance
-            </Link>
-        </div>
+        <main className="min-h-screen bg-nexure-navy flex items-center justify-center px-6">
+            <div className="text-center">
+                <span className="text-nexure-blue text-9xl font-bold">404</span>
+                <h1 className="text-3xl md:text-4xl font-bold text-white mt-4 mb-4">
+                    Page not found
+                </h1>
+                <p className="text-nexure-gray text-lg mb-8 max-w-md">
+                    The page you're looking for doesn't exist or has been moved.
+                </p>
+                <Link href="/" className="btn-primary">
+                    Back to Home
+                </Link>
+            </div>
+        </main>
     );
 }

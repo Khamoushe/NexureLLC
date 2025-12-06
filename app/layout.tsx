@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import AuroraBackground from "@/components/AuroraBackground";
 import PageTransition from "@/components/PageTransition";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Nexure LLC - The Digital Zoo",
-  description: "A premium portfolio of SaaS habitats. Explore Ogmax, Geodomaine, and more.",
+  title: "Nexure LLC — The AI-Powered Productivity Studio",
+  description: "AI-powered SaaS, automation and digital intelligence. Building smarter tools for digital entrepreneurs.",
+  keywords: ["AI", "SaaS", "automation", "productivity", "Shopify", "e-commerce", "digital tools"],
+  authors: [{ name: "Nexure LLC" }],
   icons: {
-    icon: '/favicon.ico',
+    icon: '/nexure-icon.svg',
+  },
+  openGraph: {
+    title: "Nexure LLC — The AI-Powered Productivity Studio",
+    description: "AI-powered SaaS, automation and digital intelligence.",
+    type: "website",
   },
 };
 
@@ -26,9 +32,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${outfit.variable} antialiased selection:bg-zoo-secondary selection:text-zoo-primary`}
+        className={`${inter.variable} antialiased`}
       >
-        <AuroraBackground />
         <PageTransition>
           {children}
         </PageTransition>
